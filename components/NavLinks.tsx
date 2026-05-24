@@ -72,34 +72,33 @@ export default function NavLinks() {
       </button>
 
       {/* Mobile full-screen menu */}
-      <div
-        className={`fixed inset-0 z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden ${
-          open
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
-        }`}
-      >
+      {open && (
         <div
-          className="absolute inset-0 bg-warm"
-          onClick={close}
-        />
-        <nav aria-label="Mobile navigation" className="relative">
-          <ul className="flex flex-col items-center gap-6">
-            {links.map(({ href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  onClick={close}
-                  aria-current={pathname === href ? "page" : undefined}
-                  className="font-display text-4xl text-ink transition-colors hover:text-accent aria-[current=page]:text-accent"
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+          className="fixed inset-0 z-40 flex flex-col items-center justify-center md:hidden"
+          style={{ backgroundColor: "#EDE9E0" }}
+        >
+          <div
+            className="absolute inset-0"
+            onClick={close}
+          />
+          <nav aria-label="Mobile navigation" className="relative">
+            <ul className="flex flex-col items-center gap-8">
+              {links.map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    onClick={close}
+                    aria-current={pathname === href ? "page" : undefined}
+                    className="font-display text-4xl text-ink transition-colors hover:text-[#C8A96E] aria-[current=page]:text-[#C8A96E]"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      )}
     </>
   );
 }
