@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative flex min-h-[600px] items-center overflow-hidden bg-ink">
       <div className="absolute inset-0">
         <Image
-          src="https://picsum.photos/seed/hero-bg/1920/1080"
+          src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1920&h=1080&fit=crop"
           alt=""
           fill
           className="object-cover opacity-40"
