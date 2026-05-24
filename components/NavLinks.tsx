@@ -87,7 +87,7 @@ export default function NavLinks() {
 
         {/* Panel */}
         <div
-          className={`absolute right-0 top-0 flex h-full w-72 flex-col bg-canvas shadow-xl transition-transform duration-300 ${
+          className={`absolute right-0 top-0 flex h-full w-72 flex-col bg-warm shadow-xl transition-transform duration-300 ${
             open ? "translate-x-0" : "translate-x-full"
           }`}
         >
