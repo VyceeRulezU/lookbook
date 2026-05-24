@@ -8,7 +8,7 @@ export default function Header() {
         <Link
           href="/"
           aria-label="The Lookbook — home"
-          className="font-display text-xl text-ink"
+          className="whitespace-nowrap font-display text-xl text-ink"
         >
           The Lookbook
         </Link>
