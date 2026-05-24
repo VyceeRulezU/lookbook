@@ -13,26 +13,26 @@ export const projects: Project[] = [
     role: "Art Direction + Web Design",
     tags: ["Branding", "Figma", "Motion"],
     coverImage: {
-      src: "https://picsum.photos/seed/vessel-cover/800/600",
+      src: "https://images.pexels.com/photos/5691679/pexels-photo-5691679.jpeg?auto=compress",
       alt: "Vessel brand identity — abstract geometric shapes in warm tones on a desk",
       width: 800,
       height: 600,
     },
     images: [
       {
-        src: "https://picsum.photos/seed/vessel-g1/1200/800",
+        src: "https://images.pexels.com/photos/5426402/pexels-photo-5426402.jpeg?auto=compress",
         alt: "Vessel brand stationery spread — business cards and letterhead",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/vessel-g2/1200/800",
+        src: "https://images.pexels.com/photos/3747295/pexels-photo-3747295.jpeg?auto=compress",
         alt: "Vessel color palette and typography exploration on a mood board",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/vessel-g3/800/1100",
+        src: "https://images.pexels.com/photos/4126705/pexels-photo-4126705.jpeg?auto=compress",
         alt: "Vessel brand guidelines booklet mockup",
         width: 800,
         height: 1100,
@@ -58,26 +58,26 @@ export const projects: Project[] = [
     role: "Product Design + Prototyping",
     tags: ["UX Research", "Figma", "Prototype", "iOS"],
     coverImage: {
-      src: "https://picsum.photos/seed/forma-cover/800/600",
+      src: "https://images.pexels.com/photos/7675095/pexels-photo-7675095.jpeg?auto=compress",
       alt: "Forma fitness app displayed on an iPhone held in hand",
       width: 800,
       height: 600,
     },
     images: [
       {
-        src: "https://picsum.photos/seed/forma-g1/1200/800",
+        src: "https://images.pexels.com/photos/4944001/pexels-photo-4944001.jpeg?auto=compress",
         alt: "Forma app onboarding screens showing adaptive workout selection",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/forma-g2/800/1100",
+        src: "https://images.pexels.com/photos/20240039/pexels-photo-20240039.jpeg?auto=compress",
         alt: "Forma app workout tracking dashboard with metrics",
         width: 800,
         height: 1100,
       },
       {
-        src: "https://picsum.photos/seed/forma-g3/1200/800",
+        src: "https://images.pexels.com/photos/3763872/pexels-photo-3763872.jpeg?auto=compress",
         alt: "Forma app user profile and progress visualization",
         width: 1200,
         height: 800,
@@ -102,20 +102,20 @@ export const projects: Project[] = [
     role: "Editorial Design + Art Direction",
     tags: ["Editorial", "Print", "Data Viz", "Illustration"],
     coverImage: {
-      src: "https://picsum.photos/seed/northlight-cover/800/600",
+      src: "https://images.pexels.com/photos/5691685/pexels-photo-5691685.jpeg?auto=compress",
       alt: "Northlight annual report spread with typography and data visualization",
       width: 800,
       height: 600,
     },
     images: [
       {
-        src: "https://picsum.photos/seed/northlight-g1/1200/800",
+        src: "https://images.pexels.com/photos/6801643/pexels-photo-6801643.jpeg?auto=compress",
         alt: "Northlight annual report cover with minimalist light-themed design",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/northlight-g2/1200/800",
+        src: "https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress",
         alt: "Northlight report interior spread with financial data charts",
         width: 1200,
         height: 800,
@@ -140,20 +140,20 @@ export const projects: Project[] = [
     role: "UX Design + Frontend Development",
     tags: ["E-commerce", "UX Design", "Shopify", "Next.js"],
     coverImage: {
-      src: "https://picsum.photos/seed/drift-cover/800/600",
+      src: "https://images.pexels.com/photos/6609229/pexels-photo-6609229.jpeg?auto=compress",
       alt: "Drift e-commerce website on a laptop showing product grid",
       width: 800,
       height: 600,
     },
     images: [
       {
-        src: "https://picsum.photos/seed/drift-g1/1200/800",
+        src: "https://images.pexels.com/photos/6347709/pexels-photo-6347709.jpeg?auto=compress",
         alt: "Drift online store homepage with hero and featured categories",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/drift-g2/1200/800",
+        src: "https://images.pexels.com/photos/12911688/pexels-photo-12911688.jpeg?auto=compress",
         alt: "Drift product detail page with sustainability metrics",
         width: 1200,
         height: 800,
@@ -178,26 +178,26 @@ export const projects: Project[] = [
     role: "Lead Product Designer",
     tags: ["FinTech", "UX Research", "iOS", "Android"],
     coverImage: {
-      src: "https://picsum.photos/seed/koto-cover/800/600",
+      src: "https://images.pexels.com/photos/4960650/pexels-photo-4960650.jpeg?auto=compress",
       alt: "Koto banking app interface on two smartphones side by side",
       width: 800,
       height: 600,
     },
     images: [
       {
-        src: "https://picsum.photos/seed/koto-g1/1200/800",
+        src: "https://images.pexels.com/photos/23496937/pexels-photo-23496937.jpeg?auto=compress",
         alt: "Koto app home screen with balance and recent transactions",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/koto-g2/1200/800",
+        src: "https://images.pexels.com/photos/29502355/pexels-photo-29502355.jpeg?auto=compress",
         alt: "Koto app savings goals feature visualization",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/koto-g3/800/1100",
+        src: "https://images.pexels.com/photos/6331258/pexels-photo-6331258.jpeg?auto=compress",
         alt: "Koto app spending analytics dashboard",
         width: 800,
         height: 1100,
@@ -222,20 +222,20 @@ export const projects: Project[] = [
     role: "Art Direction + Design",
     tags: ["Experimental", "Print", "Typography", "Risograph"],
     coverImage: {
-      src: "https://picsum.photos/seed/soil-cover/800/600",
+      src: "https://images.pexels.com/photos/9017615/pexels-photo-9017615.jpeg?auto=compress",
       alt: "Soil type specimen book showing textured paper samples",
       width: 800,
       height: 600,
     },
     images: [
       {
-        src: "https://picsum.photos/seed/soil-g1/1200/800",
+        src: "https://images.pexels.com/photos/4106621/pexels-photo-4106621.jpeg?auto=compress",
         alt: "Open specimen book with letterpress soil type classifications",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/soil-g2/1200/800",
+        src: "https://images.pexels.com/photos/7953297/pexels-photo-7953297.jpeg?auto=compress",
         alt: "Close-up of risograph printed soil particle patterns",
         width: 1200,
         height: 800,
@@ -260,26 +260,26 @@ export const projects: Project[] = [
     role: "UX Design + Frontend",
     tags: ["SaaS", "Data Viz", "Dashboard", "React"],
     coverImage: {
-      src: "https://picsum.photos/seed/halo-cover/800/600",
+      src: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress",
       alt: "Halo analytics dashboard on a large monitor with data charts",
       width: 800,
       height: 600,
     },
     images: [
       {
-        src: "https://picsum.photos/seed/halo-g1/1200/800",
+        src: "https://images.pexels.com/photos/32396586/pexels-photo-32396586.jpeg?auto=compress",
         alt: "Halo dashboard main overview with carbon offset metrics",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/halo-g2/1200/800",
+        src: "https://images.pexels.com/photos/6802048/pexels-photo-6802048.jpeg?auto=compress",
         alt: "Halo reporting module with exportable sustainability reports",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/halo-g3/800/1100",
+        src: "https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg?auto=compress",
         alt: "Halo team settings and permission management interface",
         width: 800,
         height: 1100,
@@ -304,26 +304,26 @@ export const projects: Project[] = [
     role: "Brand Design + Signage",
     tags: ["Branding", "Print", "Environmental", "Illustration"],
     coverImage: {
-      src: "https://picsum.photos/seed/bloom-cover/800/600",
+      src: "https://images.pexels.com/photos/18824346/pexels-photo-18824346.jpeg?auto=compress",
       alt: "Bloom conference branding on banners and signage at an event venue",
       width: 800,
       height: 600,
     },
     images: [
       {
-        src: "https://picsum.photos/seed/bloom-g1/1200/800",
+        src: "https://images.pexels.com/photos/14303316/pexels-photo-14303316.jpeg?auto=compress",
         alt: "Bloom conference main stage with branded backdrop",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/bloom-g2/1200/800",
+        src: "https://images.pexels.com/photos/7648047/pexels-photo-7648047.jpeg?auto=compress",
         alt: "Bloom printed program and attendee badges",
         width: 1200,
         height: 800,
       },
       {
-        src: "https://picsum.photos/seed/bloom-g3/800/1100",
+        src: "https://images.pexels.com/photos/3856027/pexels-photo-3856027.jpeg?auto=compress",
         alt: "Bloom wayfinding signage at the conference venue",
         width: 800,
         height: 1100,
