@@ -55,7 +55,7 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${dmSans.variable}`}
     >
-      <body className="flex min-h-screen flex-col bg-canvas font-body text-ink">
+      <body className="flex min-h-screen flex-col overflow-x-hidden bg-canvas font-body text-ink">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-accent focus:px-4 focus:py-2 focus:text-ink focus:outline-none"

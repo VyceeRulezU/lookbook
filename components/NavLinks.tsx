@@ -71,43 +71,34 @@ export default function NavLinks() {
         </div>
       </button>
 
-      {/* Mobile overlay */}
+      {/* Mobile full-screen menu */}
       <div
-        className={`fixed inset-0 z-40 transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden ${
           open
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
         }`}
       >
-        {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-ink/40 backdrop-blur-sm"
+          className="absolute inset-0 bg-warm"
           onClick={close}
         />
-
-        {/* Panel */}
-        <div
-          className={`absolute right-0 top-0 flex h-full w-72 flex-col bg-warm shadow-xl transition-transform duration-300 ${
-            open ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <nav aria-label="Mobile navigation" className="mt-24 flex-1 px-8">
-            <ul className="flex flex-col gap-2">
-              {links.map(({ href, label }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    onClick={close}
-                    aria-current={pathname === href ? "page" : undefined}
-                    className="block rounded-lg px-4 py-3 font-display text-2xl text-ink transition-colors hover:bg-warm aria-[current=page]:text-accent"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+        <nav aria-label="Mobile navigation" className="relative">
+          <ul className="flex flex-col items-center gap-6">
+            {links.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  onClick={close}
+                  aria-current={pathname === href ? "page" : undefined}
+                  className="font-display text-4xl text-ink transition-colors hover:text-accent aria-[current=page]:text-accent"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </>
   );
