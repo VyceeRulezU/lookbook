@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -13,19 +13,26 @@ const links = [
 export default function NavLinks() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-
-  const close = () => setOpen(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
-    if (open) {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    if (open && !dialog.open) {
+      dialog.showModal();
       document.body.style.overflow = "hidden";
-    } else {
+    } else if (!open && dialog.open) {
+      dialog.close();
       document.body.style.overflow = "";
     }
+  }, [open]);
+
+  useEffect(() => {
     return () => {
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, []);
 
   return (
     <>
@@ -46,48 +53,59 @@ export default function NavLinks() {
 
       {/* Hamburger */}
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() => setOpen(true)}
         className="relative z-50 flex size-10 items-center justify-center md:hidden"
-        aria-label={open ? "Close menu" : "Open menu"}
+        aria-label="Open menu"
         aria-expanded={open}
       >
-        <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
         <div className="flex w-5 flex-col gap-[5px]">
-          <span
-            className={`h-[2px] w-full bg-ink transition-all duration-300 ${
-              open ? "translate-y-[7px] rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`h-[2px] w-full bg-ink transition-all duration-300 ${
-              open ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`h-[2px] w-full bg-ink transition-all duration-300 ${
-              open ? "-translate-y-[7px] -rotate-45" : ""
-            }`}
-          />
+          <span className="h-[2px] w-full bg-ink transition-all duration-300" />
+          <span className="h-[2px] w-full bg-ink transition-all duration-300" />
+          <span className="h-[2px] w-full bg-ink transition-all duration-300" />
         </div>
       </button>
 
-      {/* Mobile full-screen menu */}
-      {open && (
-        <div
-          className="fixed inset-0 z-40 flex flex-col items-center justify-center md:hidden"
-          style={{ backgroundColor: "#EDE9E0" }}
-        >
-          <div
-            className="absolute inset-0"
-            onClick={close}
-          />
-          <nav aria-label="Mobile navigation" className="relative">
+      <style>{`dialog::backdrop { background: rgba(0,0,0,0.4); }`}</style>
+
+      {/* Mobile menu dialog */}
+      <dialog
+        ref={dialogRef}
+        onClose={() => setOpen(false)}
+        style={{
+          padding: 0,
+          border: "none",
+          borderRadius: 0,
+          width: "100%",
+          maxWidth: "100vw",
+          height: "100%",
+          maxHeight: "100vh",
+          backgroundColor: "#EDE9E0",
+          margin: 0,
+          top: 0,
+          left: 0,
+          position: "fixed",
+        }}
+      >
+        <div className="flex h-full w-full flex-col items-center justify-center">
+          <button
+            onClick={() => setOpen(false)}
+            className="absolute right-6 top-5 flex size-10 items-center justify-center"
+            aria-label="Close menu"
+          >
+            <div className="flex w-5 flex-col gap-[5px]">
+              <span className="h-[2px] w-full translate-y-[7px] rotate-45 bg-ink" />
+              <span className="h-[2px] w-full opacity-0 bg-ink" />
+              <span className="h-[2px] w-full -translate-y-[7px] -rotate-45 bg-ink" />
+            </div>
+          </button>
+
+          <nav aria-label="Mobile navigation">
             <ul className="flex flex-col items-center gap-8">
               {links.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    onClick={close}
+                    onClick={() => setOpen(false)}
                     aria-current={pathname === href ? "page" : undefined}
                     className="font-display text-4xl text-ink transition-colors hover:text-[#C8A96E] aria-[current=page]:text-[#C8A96E]"
                   >
@@ -98,7 +116,7 @@ export default function NavLinks() {
             </ul>
           </nav>
         </div>
-      )}
+      </dialog>
     </>
   );
 }
